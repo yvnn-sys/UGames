@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGames - Portal Game Ringan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <header class="glass-header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="UGames Logo" class="logo-img">
+            <h1>UGames</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Beranda</a></li>
+                <li><a href="#">Populer</a></li>
+                <li><a href="#">Terbaru</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Dunia Game Tanpa Batas</h2>
+            <p>Jelajahi dimensi baru hiburan kasual. Mainkan berbagai game ringan interaktif kami secara instan tanpa perlu instalasi.</p>
+        </section>
+
+        <section class="games-grid">
+            <!-- Game Card: Tic-Tac-Toe -->
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="assets/tic_tac_toe.png" alt="Tic Tac Toe Game">
+                    <div class="play-overlay">
+                        <a href="games/tic-tac-toe/index.html" class="play-btn">Main Sekarang</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Tic Tac Toe</h3>
+                    <p>Game klasik untuk dua pemain. Tantang temanmu!</p>
+                    <div class="tags">
+                        <span class="tag">Strategy</span>
+                        <span class="tag">2 Players</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Card: Memory Match -->
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="assets/memory_match.png" alt="Memory Match Game">
+                    <div class="play-overlay">
+                        <a href="games/memory-match/index.html" class="play-btn">Main Sekarang</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Memory Match</h3>
+                    <p>Latih ingatanmu dengan mencocokkan kartu yang sama.</p>
+                    <div class="tags">
+                        <span class="tag">Puzzle</span>
+                        <span class="tag">Brain</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Card: Snake -->
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="assets/snake.png" alt="Snake Game">
+                    <div class="play-overlay">
+                        <a href="games/snake/index.html" class="play-btn">Main Sekarang</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Snake</h3>
+                    <p>Mainkan game retro legendaris dalam tampilan modern.</p>
+                    <div class="tags">
+                        <span class="tag">Arcade</span>
+                        <span class="tag">Retro</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Card: Pong -->
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="assets/pong.png" alt="Pong Game">
+                    <div class="play-overlay">
+                        <a href="games/pong/index.html" class="play-btn">Main Sekarang</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Pong</h3>
+                    <p>Rasakan nuansa arcade dengan game Pong yang minimalis.</p>
+                    <div class="tags">
+                        <span class="tag">Arcade</span>
+                        <span class="tag">Sports</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Card: 2048 -->
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="assets/2048.png" alt="2048 Game">
+                    <div class="play-overlay">
+                        <a href="games/2048/index.html" class="play-btn">Main Sekarang</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>2048</h3>
+                    <p>Gabungkan angka hingga mencapai 2048 di grid yang menantang.</p>
+                    <div class="tags">
+                        <span class="tag">Puzzle</span>
+                        <span class="tag">Logic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Card: Whack-a-Mole -->
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="assets/whack_a_mole.png" alt="Whack a Mole Game">
+                    <div class="play-overlay">
+                        <a href="games/whack-a-mole/index.html" class="play-btn">Main Sekarang</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Whack-a-Mole</h3>
+                    <p>Uji refleksmu dengan memukul tikus tanah secepat mungkin.</p>
+                    <div class="tags">
+                        <span class="tag">Action</span>
+                        <span class="tag">Reflex</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UGames. Dibuat dengan HTML, CSS, & JS.</p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

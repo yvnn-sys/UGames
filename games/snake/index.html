@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Snake - AntiGravity Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <a href="../../index.html" class="back-btn">&larr; Kembali ke Portal</a>
+            <h1>Cyber <span>Snake</span></h1>
+        </header>
+
+        <div class="status-board">
+            <h2 id="scoreText">Skor: 0</h2>
+            <button id="restartBtn">Mulai</button>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="gameBoard" width="400" height="400"></canvas>
+            <div id="gameOverScreen" class="overlay hidden">
+                <h2>Game Over!</h2>
+                <p>Skor Akhir: <span id="finalScore">0</span></p>
+                <button id="tryAgainBtn">Coba Lagi</button>
+            </div>
+        </div>
+        
+        <div class="mobile-controls">
+            <button id="upBtn">▲</button>
+            <div class="horizontal">
+                <button id="leftBtn">◀</button>
+                <button id="rightBtn">▶</button>
+            </div>
+            <button id="downBtn">▼</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

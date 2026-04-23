@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Cyber - UGames</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <a href="../../index.html" class="back-btn">&larr; Kembali</a>
+            <h1>2048 <span>Cyber</span></h1>
+            <div class="score-container">
+                <div class="score-box">
+                    SCORE
+                    <span id="score">0</span>
+                </div>
+                <div class="score-box">
+                    BEST
+                    <span id="best-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-board-container">
+            <div id="game-board"></div>
+            
+            <div class="game-over" id="game-over" style="display: none;">
+                <h2 id="final-message">Game Over!</h2>
+                <button onclick="restartGame()" id="restart-btn">Coba Lagi</button>
+            </div>
+        </div>
+        
+        <div class="controls-info">
+            <p>Gunakan tombol panah (Atas, Bawah, Kiri, Kanan) untuk menggabungkan angka yang sama.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

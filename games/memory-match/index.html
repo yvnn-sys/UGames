@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match - AntiGravity Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <a href="../../index.html" class="back-btn">&larr; Kembali ke Portal</a>
+            <h1>Memory <span>Match</span></h1>
+        </header>
+
+        <div class="status-board">
+            <h2>Langkah: <span id="movesCount">0</span></h2>
+            <h2>Waktu: <span id="timeCount">0</span>s</h2>
+            <button id="restartBtn">Mulai Baru</button>
+        </div>
+
+        <div class="memory-board" id="board">
+            <!-- Cards will be generated here by JS -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

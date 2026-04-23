@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-Mole - UGames</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <a href="../../index.html" class="back-btn">&larr; Kembali</a>
+            <h1>Whack <span>a Mole</span></h1>
+            <div class="stats-container">
+                <div class="stat-box">
+                    SCORE
+                    <span id="score">0</span>
+                </div>
+                <div class="stat-box">
+                    BEST
+                    <span id="best-score">0</span>
+                </div>
+                <div class="stat-box">
+                    TIME
+                    <span id="time">30</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-board-container">
+            <div id="game-board">
+                <!-- 9 holes -->
+                <div class="hole hole1"><div class="mole"></div></div>
+                <div class="hole hole2"><div class="mole"></div></div>
+                <div class="hole hole3"><div class="mole"></div></div>
+                <div class="hole hole4"><div class="mole"></div></div>
+                <div class="hole hole5"><div class="mole"></div></div>
+                <div class="hole hole6"><div class="mole"></div></div>
+                <div class="hole hole7"><div class="mole"></div></div>
+                <div class="hole hole8"><div class="mole"></div></div>
+                <div class="hole hole9"><div class="mole"></div></div>
+            </div>
+            <div class="game-over" id="game-over">
+                <h2 id="final-message">Waktu Habis!</h2>
+                <button onclick="startGame()">Mulai Game</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
