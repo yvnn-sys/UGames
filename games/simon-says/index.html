@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says - UGames</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <a href="../../index.html" class="back-btn">&larr; Kembali ke Portal</a>
+            <h1>Simon <span>Says</span></h1>
+        </header>
+
+        <div class="status-board">
+            <h2 id="levelText">Level 1</h2>
+            <button id="startBtn">Mulai</button>
+        </div>
+
+        <div class="simon-board">
+            <div class="pad green" id="green"></div>
+            <div class="pad red" id="red"></div>
+            <div class="pad yellow" id="yellow"></div>
+            <div class="pad blue" id="blue"></div>
+            <div class="center-circle"></div>
+        </div>
+        
+        <div id="gameOverOverlay" class="overlay hidden">
+            <h2 id="endMessage">Game Over!</h2>
+            <p>Level Terakhir: <span id="finalLevel"></span></p>
+            <button id="playAgainBtn">Coba Lagi</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

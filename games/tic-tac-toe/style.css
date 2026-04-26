@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #0b0c10;
-    --text-primary: #ffffff;
-    --accent-x: #ff0055;
-    --accent-o: #00e5ff;
-    --cell-bg: rgba(31, 40, 51, 0.8);
-    --border-color: rgba(255, 255, 255, 0.1);
+    --bg-color: #f8fafc;
+    --text-primary: #0f172a;
+    --accent-x: #ef4444;
+    --accent-o: #3b82f6;
+    --cell-bg: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -21,7 +21,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: radial-gradient(circle at center, #1f2833 0%, #0b0c10 100%);
 }
 
 .game-container {
@@ -30,11 +29,10 @@ body {
     align-items: center;
     gap: 2rem;
     padding: 2rem;
-    background: rgba(11, 12, 16, 0.5);
-    backdrop-filter: blur(10px);
+    background: #ffffff;
     border-radius: 20px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 header {
@@ -51,10 +49,12 @@ header {
     font-size: 0.9rem;
     opacity: 0.7;
     transition: opacity 0.3s;
+    font-weight: 500;
 }
 
 .back-btn:hover {
     opacity: 1;
+    color: var(--accent-o);
 }
 
 h1 {
@@ -83,7 +83,7 @@ h1 span {
     padding: 0.8rem 2rem;
     background: transparent;
     color: var(--text-primary);
-    border: 2px solid var(--text-primary);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     font-size: 1rem;
     font-weight: 600;
@@ -93,7 +93,7 @@ h1 span {
 
 #restartBtn:hover {
     background: var(--text-primary);
-    color: var(--bg-color);
+    color: #ffffff;
 }
 
 .board {
@@ -119,17 +119,15 @@ h1 span {
 }
 
 .cell:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #f1f5f9;
 }
 
 .cell[data-player="X"] {
     color: var(--accent-x);
-    text-shadow: 0 0 15px var(--accent-x);
 }
 
 .cell[data-player="O"] {
     color: var(--accent-o);
-    text-shadow: 0 0 15px var(--accent-o);
 }
 
 @media (max-width: 500px) {

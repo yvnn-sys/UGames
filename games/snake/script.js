@@ -38,7 +38,7 @@ document.getElementById('leftBtn').addEventListener('click', () => changeDirecti
 document.getElementById('rightBtn').addEventListener('click', () => changeDirection({keyCode: 39}));
 
 // Draw initial state
-ctx.fillStyle = "#111116";
+ctx.fillStyle = "#ffffff";
 ctx.fillRect(0, 0, gameWidth, gameHeight);
 
 function gameStart() {
@@ -67,12 +67,12 @@ function nextTick() {
 }
 
 function clearBoard() {
-    ctx.fillStyle = "#111116";
+    ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, gameWidth, gameHeight);
 }
 
 function drawGrid() {
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.05)";
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.05)";
     ctx.lineWidth = 1;
     for (let i = 0; i <= gameWidth; i += unitSize) {
         ctx.beginPath();
@@ -97,9 +97,9 @@ function createFood() {
 }
 
 function drawFood() {
-    ctx.fillStyle = "#ff003c";
-    ctx.shadowBlur = 15;
-    ctx.shadowColor = "#ff003c";
+    ctx.fillStyle = "#ef4444";
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = "rgba(239, 68, 68, 0.5)";
     ctx.fillRect(foodX, foodY, unitSize, unitSize);
     ctx.shadowBlur = 0; // Reset
 }
@@ -120,14 +120,14 @@ function moveSnake() {
 }
 
 function drawSnake() {
-    ctx.shadowBlur = 10;
-    ctx.shadowColor = "#39ff14";
+    ctx.shadowBlur = 5;
+    ctx.shadowColor = "rgba(34, 197, 94, 0.5)";
     
     snake.forEach((part, index) => {
         // Head is slightly different color
-        ctx.fillStyle = index === 0 ? "#ffffff" : "#39ff14";
+        ctx.fillStyle = index === 0 ? "#16a34a" : "#22c55e";
         ctx.fillRect(part.x, part.y, unitSize, unitSize);
-        ctx.strokeStyle = "#111116";
+        ctx.strokeStyle = "#ffffff";
         ctx.strokeRect(part.x, part.y, unitSize, unitSize);
     });
     

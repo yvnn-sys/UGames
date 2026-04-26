@@ -1,0 +1,205 @@
+:root {
+    --bg-color: #f8fafc;
+    --text-primary: #0f172a;
+    --accent-color: #10b981;
+    --border-color: rgba(0, 0, 0, 0.1);
+    
+    --pad-green: #34d399;
+    --pad-green-active: #059669;
+    --pad-red: #f87171;
+    --pad-red-active: #dc2626;
+    --pad-yellow: #fde047;
+    --pad-yellow-active: #d97706;
+    --pad-blue: #60a5fa;
+    --pad-blue-active: #2563eb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+}
+
+.back-btn {
+    display: inline-block;
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    opacity: 1;
+    color: var(--accent-color);
+}
+
+h1 {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 span {
+    color: var(--accent-color);
+}
+
+.status-board {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#levelText {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+button {
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--text-primary);
+    color: #ffffff;
+}
+
+.simon-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    background-color: var(--border-color);
+    padding: 15px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pad {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    opacity: 0.8;
+}
+
+.pad:hover {
+    opacity: 1;
+}
+
+.pad.green {
+    background-color: var(--pad-green);
+    border-top-left-radius: 100%;
+}
+
+.pad.red {
+    background-color: var(--pad-red);
+    border-top-right-radius: 100%;
+}
+
+.pad.yellow {
+    background-color: var(--pad-yellow);
+    border-bottom-left-radius: 100%;
+}
+
+.pad.blue {
+    background-color: var(--pad-blue);
+    border-bottom-right-radius: 100%;
+}
+
+/* Active States */
+.pad.green.active { background-color: var(--pad-green-active); opacity: 1; box-shadow: 0 0 20px var(--pad-green); }
+.pad.red.active { background-color: var(--pad-red-active); opacity: 1; box-shadow: 0 0 20px var(--pad-red); }
+.pad.yellow.active { background-color: var(--pad-yellow-active); opacity: 1; box-shadow: 0 0 20px var(--pad-yellow); }
+.pad.blue.active { background-color: var(--pad-blue-active); opacity: 1; box-shadow: 0 0 20px var(--pad-blue); }
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 15px solid var(--border-color);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay h2 {
+    color: var(--pad-red-active);
+    font-size: 2.5rem;
+}
+
+@media (max-width: 500px) {
+    .pad {
+        width: 100px;
+        height: 100px;
+    }
+    .center-circle {
+        width: 80px;
+        height: 80px;
+        border-width: 10px;
+    }
+}

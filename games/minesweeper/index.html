@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper - UGames</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <a href="../../index.html" class="back-btn">&larr; Kembali ke Portal</a>
+            <h1>Mine<span>sweeper</span></h1>
+        </header>
+
+        <div class="status-board">
+            <div class="stat">
+                <span>Ranjau:</span>
+                <span id="flagsLeft">10</span>
+            </div>
+            <button id="restartBtn">Main Lagi</button>
+            <div class="stat">
+                <span>Skor:</span>
+                <span id="scoreVal">0</span>
+            </div>
+        </div>
+
+        <div class="board-container">
+            <div id="grid" class="grid"></div>
+            <div id="gameOverOverlay" class="overlay hidden">
+                <h2 id="endMessage">Game Over!</h2>
+                <button id="playAgainBtn">Coba Lagi</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
